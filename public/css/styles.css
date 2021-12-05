@@ -1,5 +1,5 @@
 /*---------------------------------------IMPORT*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');/*------------------------------------VARIABLES*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
 
 :root {
 /*colores----------------------------*/
@@ -36,7 +36,7 @@
   }
   
   h3{
-      font-size: var(--title-md);
+      font-size: var(--text-md);
   }
   
   p{
@@ -69,7 +69,7 @@ header picture.logo{
 
 header div p {
   margin-top: 1px;
-  font-size: val(--text-sm);
+  font-size: var(--text-sm);
   text-align: center;
 }
 
@@ -103,9 +103,9 @@ header div.menu-hamburger {
 header div.menu-hamburger i {
   border-radius: 15%;
   background-color: var(--BackgroundMenuBurger);
-  height: 40px;
-  width: 40px;
-  padding: 8px;
+  height: 45px;
+  width: 45px;
+  padding: 11px 0px;
   margin: 15px;
   color: var(--blanco); 
 }
@@ -117,9 +117,34 @@ main{
   margin: 0 auto;
 }
 
+main section article {
+  margin: 10px;
+}
+
+main section article div{
+  margin-top: 1px;
+  background-color: var(--blanco);
+  padding: 15px;
+}
+
+main section article div i {
+  border:1px solid var(--verde);
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  color: var(--verde);
+  font-size: var(--text-lg);
+  align-content: center;
+}
+
+main section article div p.discount{
+  color: var(--verde);
+}
+
+
 /*---------------------------------------FOOTER*/
 footer {
-  background-color: white;
+  background-color: var(--blanco);
   padding: 3% 10%;
 }
 
@@ -135,7 +160,13 @@ footer section i {
   margin: 2%;
 }
 
+.tarjeta-credito{
+  /*color: var(--blanco);*/
+  background: var(--blanco);
+}
+
 .copyright {
   text-align: left;
   margin-left: 5px;
+  padding-left:0px ;
 }
