@@ -1,0 +1,141 @@
+/*---------------------------------------IMPORT*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');/*------------------------------------VARIABLES*/
+
+:root {
+/*colores----------------------------*/
+  --BackgroundHead: #eac926;
+  --BackgroundMenuBurger:#0044aa;
+  --azul: #03264c;
+  --celeste: #1259c3;
+  --gris-oscuro: #666;
+  --gris-claro: #EBEBEB;
+  --blanco: #ffffff;
+  --verde: #39b54a;
+  --negro:#000000;
+  
+/*Fuentes----------------------------*/
+  --text-sm: 1.2em;
+  --text-md: 1.6em;
+  --text-lg: 1.8em;
+  --title-md: 2.4em;
+
+  --roboto: "Roboto", sans-serif;
+}
+
+/*--------------------------------NORMALIZACIÓN*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html{
+      font-family:sans-serif;
+      font-size: 62.5%;
+  }
+  
+  h3{
+      font-size: var(--title-md);
+  }
+  
+  p{
+      font-size: var(--text-sm);
+  }
+
+  img {
+    width: 100%;
+  }
+
+  body {
+    background-color:var(--gris-claro);
+  }
+
+/*---------------------------------------HEADER*/
+/*Top Header Start-------------------*/
+header {
+  background-color: var(--BackgroundHead);
+}
+
+header div.top-head {
+  padding: 5% 15% 2% 15%;
+  text-align: center;
+}
+
+header picture.logo{
+    display: block;
+    width: 100%;
+}
+
+header div p {
+  margin-top: 1px;
+  font-size: val(--text-sm);
+  text-align: center;
+}
+
+
+/*Top Header Ends--------------------*/
+
+
+/*Top Header Nav Start---------------*/
+
+nav ul {
+  margin: 2% 0%;
+}
+nav ul li a {
+    font-size: var(--text-sm);
+    text-decoration: none;
+    color: var(--negro);
+}
+
+nav ul li a i {
+    font-size: var(--text-sm);
+}
+/*Top Header Nav Ends----------------*/
+
+/*Top Header Menu Hamburger Start----*/
+
+header div.menu-hamburger {
+  text-align: center;
+  font-size: 23px;
+}
+
+header div.menu-hamburger i {
+  border-radius: 15%;
+  background-color: var(--BackgroundMenuBurger);
+  height: 40px;
+  width: 40px;
+  padding: 8px;
+  margin: 15px;
+  color: var(--blanco); 
+}
+/*Top Header Menu Hamburger Ends-----*/
+
+/*-----------------------------------------MAIN*/
+main{
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*---------------------------------------FOOTER*/
+footer {
+  background-color: white;
+  padding: 3% 10%;
+}
+
+footer section {
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 2% 8%;
+}
+
+footer section i {
+  color:var(--celeste);
+  font-size: 3em;
+  margin: 2%;
+}
+
+.copyright {
+  text-align: left;
+  margin-left: 5px;
+}
