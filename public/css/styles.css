@@ -20,6 +20,10 @@
   --title-md: 2.4em;
 
   --roboto: "Roboto", sans-serif;
+
+  /*Pantallas------------------------*/
+  /*--tablets:361px;
+  --desktops:769px; No funciono :(*/
 }
 
 /*--------------------------------NORMALIZACIÓN*/
@@ -57,6 +61,13 @@ header {
   background-color: var(--BackgroundHead);
 }
 
+header nav{
+  display: none;
+}
+.banner{
+  margin: 0px;
+}
+
 header div.top-head {
   padding: 5% 15% 2% 15%;
   text-align: center;
@@ -80,7 +91,7 @@ header div p {
 /*Top Header Nav Start---------------*/
 
 nav ul {
-  margin: 2% 0%;
+  margin-top: 2%;
 }
 nav ul li a {
     font-size: var(--text-sm);
@@ -98,6 +109,7 @@ nav ul li a i {
 header div.menu-hamburger {
   text-align: center;
   font-size: 23px;
+  display: block;
 }
 
 header div.menu-hamburger i {
@@ -107,7 +119,8 @@ header div.menu-hamburger i {
   width: 45px;
   padding: 11px 0px;
   margin: 15px;
-  color: var(--blanco); 
+  color: var(--blanco);
+  text-align: center; 
 }
 /*Top Header Menu Hamburger Ends-----*/
 
@@ -117,8 +130,12 @@ main{
   margin: 0 auto;
 }
 
-main section article {
+article.card{
   margin: 10px;
+}
+
+.card-sep-info{
+  margin: 3px 0;
 }
 
 main section article div{
@@ -135,10 +152,19 @@ main section article div i {
   color: var(--verde);
   font-size: var(--text-lg);
   align-content: center;
+  padding: 9px;
 }
 
 main section article div p.discount{
   color: var(--verde);
+}
+
+main section article div h3 {
+  margin-top: 10px;
+}
+
+h3.description{
+  display: none;
 }
 
 
@@ -169,4 +195,34 @@ footer section i {
   text-align: left;
   margin-left: 5px;
   padding-left:0px ;
+}
+
+/*---------------------------------MEDIA-QUERYS*/
+
+@media screen and (min-width: 361px) {
+  
+  header nav {
+    display: block;
+  }
+
+  header div.menu-hamburger, i{
+   display: none;
+   margin: 0px;
+  }
+
+  h3.description{
+    display: block;
+  }
+
+  article.card{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  
+}
+
+
+@media screen and (min-width: 769px) {
+  
+
+
 }
