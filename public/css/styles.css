@@ -1,20 +1,20 @@
 /*---------------------------------------IMPORT*/
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap");
 
 :root {
-/*colores----------------------------*/
+  /*colores----------------------------*/
   --BackgroundHead: #eac926;
-  --BackgroundMenuBurger:#0044aa;
+  --BackgroundMenuBurger: #0044aa;
   --azul: #03264c;
   --celeste: #1259c3;
   --gris-oscuro: #666;
-  --gris-claro: #EBEBEB;
+  --gris-claro: #ebebeb;
   --blanco: #ffffff;
   --verde: #39b54a;
-  --negro:#000000;
-  
-/*Fuentes----------------------------*/
-  --text-sm: 1.2em;
+  --negro: #000000;
+
+  /*Fuentes----------------------------*/
+  --text-sm: 1.3em;
   --text-md: 1.6em;
   --text-lg: 1.8em;
   --title-md: 2.4em;
@@ -23,93 +23,144 @@
 
   /*Pantallas------------------------*/
   /*--tablets:361px;
-  --desktops:769px; No funciono :(*/
+  --desktops:769px; No funciono :(   */
 }
 
 /*--------------------------------NORMALIZACIÓN*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html{
-      font-family:sans-serif;
-      font-size: 62.5%;
-  }
-  
-  h3{
-      font-size: var(--text-md);
-  }
-  
-  p{
-      font-size: var(--text-sm);
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  img {
-    width: 100%;
-  }
+html {
+  font-family: "Roboto";
+  font-size: 62.5%;
+}
 
-  body {
-    background-color:var(--gris-claro);
-  }
+h3 {
+  font-size: 1.8em;
+  color: var(--gris-oscuro);
+}
+
+p {
+  font-size: var(--text-sm);
+}
+
+body {
+  background-color: var(--gris-claro);
+}
+
+form {
+  display: flex;
+}
+
+img {
+  width: 100%;
+}
+
+main,
+.top-head,
+header nav,
+.footer-container {
+  width: 90%;
+  margin: 0 auto;
+}
 
 /*---------------------------------------HEADER*/
 /*Top Header Start-------------------*/
+
 header {
+  padding: 2%;
   background-color: var(--BackgroundHead);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-around;
 }
 
-header nav{
-  display: none;
-}
-.banner{
-  margin: 0px;
-}
-
-header div.top-head {
-  padding: 5% 15% 2% 15%;
-  text-align: center;
+.top-head {
+  padding: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
 }
 
-header picture.logo{
-    display: block;
-    width: 100%;
+header div.top-head picture {
+  width: 40%;
+  max-width: 150px;
 }
 
-header div p {
-  margin-top: 1px;
-  font-size: var(--text-sm);
-  text-align: center;
+header div.top-head p {
+  margin-top: 10px;
 }
 
+.input-search {
+  border-radius: 5px 0px 0px 5px;
+  padding: 3%;
+  height: 31px;
+  border-style: none;
+  width: 85%;
+  max-height: 35px;
+}
 
-/*Top Header Ends--------------------*/
+.form-search {
+  width: 50%;
+  max-width: 70%;
 
+  justify-content: center;
+  align-self: center;
+}
+
+.button-search {
+  background-color: var(--blanco);
+  border-radius: 0px 5px 5px 0px;
+  border-style: none;
+  color: var(--gris-oscuro);
+  width: 15%;
+  max-width: 45px;
+}
 
 /*Top Header Nav Start---------------*/
 
-nav ul {
-  margin-top: 2%;
-}
-nav ul li a {
-    font-size: var(--text-sm);
-    text-decoration: none;
-    color: var(--negro);
+header nav {
+  display: none;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  font-size: var(--text-sm);
 }
 
-nav ul li a i {
-    font-size: var(--text-sm);
+header nav ul {
+  display: flex;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  gap: 25px;
+  justify-content: center;
 }
-/*Top Header Nav Ends----------------*/
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  list-style-type: none;
+  color: var(--negro);
+}
 
 /*Top Header Menu Hamburger Start----*/
 
 header div.menu-hamburger {
-  text-align: center;
   font-size: 23px;
-  display: block;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 header div.menu-hamburger i {
@@ -120,73 +171,107 @@ header div.menu-hamburger i {
   padding: 11px 0px;
   margin: 15px;
   color: var(--blanco);
-  text-align: center; 
+  text-align: center;
 }
 /*Top Header Menu Hamburger Ends-----*/
 
+.banner {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
 /*-----------------------------------------MAIN*/
-main{
-  width: 90%;
-  margin: 0 auto;
+
+main section {
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: stretch;
 }
 
-article.card{
+article.card {
   margin: 10px;
+  flex: 100%;
 }
 
-.card-sep-info{
-  margin: 3px 0;
+article.card div {
+  margin-top: 1px 0;
+  position: relative;
 }
 
-main section article div{
-  margin-top: 1px;
+main section article div {
   background-color: var(--blanco);
   padding: 15px;
 }
 
 main section article div i {
-  border:1px solid var(--verde);
+  border: 1px solid var(--verde);
   border-radius: 50%;
+  background-color: var(--blanco);
   height: 40px;
   width: 40px;
   color: var(--verde);
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
+  text-align: center;
   align-content: center;
-  padding: 9px;
+  padding: 10px;
+  position: absolute;
+  right: 20px;
+  top: -22px;
 }
 
-main section article div p.discount{
+.discount {
   color: var(--verde);
+  width: 70%;
+  display: inline;
+  font-size: 1.525em;
+}
+
+.price {
+  width: 30%;
+  display: inline;
+  margin-right: 2%;
+  font-size: var(--text-md);
 }
 
 main section article div h3 {
   margin-top: 10px;
 }
 
-h3.description{
+h3.description {
   display: none;
+  font-size: 1.3em;
 }
-
 
 /*---------------------------------------FOOTER*/
 footer {
   background-color: var(--blanco);
-  padding: 3% 10%;
+  padding: 1% 2%;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+}
+
+footer div.footer-container section {
+  max-width: 100%;
 }
 
 footer section {
   text-align: center;
-  margin-bottom: 10px;
-  padding: 2% 8%;
+  margin-bottom: 8px;
 }
 
 footer section i {
-  color:var(--celeste);
+  color: var(--celeste);
   font-size: 3em;
   margin: 2%;
 }
 
-.tarjeta-credito{
+.tarjeta-credito {
   /*color: var(--blanco);*/
   background: var(--blanco);
 }
@@ -194,35 +279,150 @@ footer section i {
 .copyright {
   text-align: left;
   margin-left: 5px;
-  padding-left:0px ;
+  padding-left: 0px;
 }
 
 /*---------------------------------MEDIA-QUERYS*/
 
+/*Tablets----------------------------*/
 @media screen and (min-width: 361px) {
-  
+  main,
+  .top-head,
+  header nav,
+  .footer-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  header,
+  .top-head {
+    padding: 1%;
+  }
+
   header nav {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+  }
+
+  header div.top-head picture {
+    width: 30%;
+  }
+
+  .form-search {
+    width: 60%;
+  }
+
+  header div.menu-hamburger,
+  i {
+    display: none;
+    margin: 0px;
+  }
+
+  h3.description {
     display: block;
   }
 
-  header div.menu-hamburger, i{
-   display: none;
-   margin: 0px;
+  main section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: stretch;
   }
 
-  h3.description{
-    display: block;
-  }
-
-  article.card{
+  article.card {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    flex: 45%;
   }
-  
 }
 
+@media screen and (min-width: 677px) {
+  header nav ul {
+    display: flex;
+    width: 50%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    gap: 20px;
+    justify-content: center;
+    align-self: center;
+  }
 
-@media screen and (min-width: 769px) {
+  header nav {
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  .flex-align-start {
+    justify-content: flex-start;
+  }
+
+  .flex-align-end {
+    justify-content: flex-end;
+  }
+
+  article.card {
+    flex:20%;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
   
+  footer div.footer-container section {
+    width: 30%;
+    max-width: 30%;
+  }
+}
 
+/*Desktops---------------------------*/
+@media screen and (min-width: 769px) {
+  main, .top-head, header nav, .footer-container {
+    width: 80%;
+    margin: 0 auto;
+  }
 
+  header,
+  .top-head {
+    padding: 3px;
+    justify-content: center;
+  }
+
+  header nav ul {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    gap: 20px;
+    justify-content: center;
+    align-self: center;
+  }
+
+}
+@media screen and (min-width: 1149px) {
+  
+  h3{
+    font-size: 2em;
+  }
+
+  header {
+    font-size: 1.1em;
+  }
+
+  header div.top-head p {
+    margin-top: 0px;
+  }
+
+  .input-search {
+    font-size: 1.4em;
+  }
+
+  .button-search {
+    font-size: 1.4em;
+  }
+
+  article.card {
+    width: 25%;
+  }
 }
