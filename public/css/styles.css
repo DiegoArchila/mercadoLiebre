@@ -19,7 +19,7 @@
   --text-lg: 1.8em;
   --title-md: 2.4em;
 
-  --roboto: "Roboto", sans-serif;
+  --roboto: "Roboto", sans-serif, "times new roman";
 
   /*Pantallas------------------------*/
   /*--tablets:361px;
@@ -103,7 +103,7 @@ header div.top-head p {
 .input-search {
   border-radius: 5px 0px 0px 5px;
   padding: 3%;
-  height: 31px;
+  height: 35px;
   border-style: none;
   width: 85%;
   max-height: 35px;
@@ -123,7 +123,8 @@ header div.top-head p {
   border-style: none;
   color: var(--gris-oscuro);
   width: 15%;
-  max-width: 45px;
+  max-width: 48px;
+  height: auto;
 }
 
 /*Top Header Nav Start---------------*/
@@ -157,6 +158,7 @@ header nav ul li a {
 /*Top Header Menu Hamburger Start----*/
 
 header div.menu-hamburger {
+  margin: 2%;
   font-size: 23px;
   display: flex;
   align-content: center;
@@ -169,7 +171,7 @@ header div.menu-hamburger i {
   height: 45px;
   width: 45px;
   padding: 11px 0px;
-  margin: 15px;
+  margin: 5px;
   color: var(--blanco);
   text-align: center;
 }
@@ -177,11 +179,13 @@ header div.menu-hamburger i {
 
 .banner {
   width: 100%;
-  margin-bottom: 15px;
 }
 
 /*-----------------------------------------MAIN*/
 
+main h3 {
+  margin-top: 15px;
+}
 main section {
   padding: 2%;
   display: flex;
@@ -210,16 +214,16 @@ main section article div i {
   border: 1px solid var(--verde);
   border-radius: 50%;
   background-color: var(--blanco);
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   color: var(--verde);
   font-size: var(--text-md);
   text-align: center;
   align-content: center;
-  padding: 10px;
+  padding: 5px;
   position: absolute;
   right: 20px;
-  top: -22px;
+  top: -17px;
 }
 
 .discount {
@@ -245,8 +249,111 @@ h3.description {
   font-size: 1.3em;
 }
 
+.container-register-login {
+  margin-bottom: 1%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.container-center {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-top: 6%;
+  margin-bottom: 7%;
+}
+
+.user-register {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+}
+
+.user-register input {
+  width: 100%;
+  height: 30px;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-style: none;
+  border-radius: 3px;
+  background-color: var(--blanco);
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-size: var(--text-sm);
+}
+
+.user-register label {
+  font-size: var(--text-md);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.flex-row > label {
+  justify-content: space-around;
+  font-size: var(--text-sm);
+}
+
+.flex-row > .flex-row {
+  display: flex;
+  width: 33.3%;
+}
+
+.user-register input[type="radio"],
+input[type="checkbox"] {
+  height: 15px;
+}
+
+.photo-user {
+  padding-top: 5.5px;
+}
+
+.container-center picture img {
+  width: 100%;
+}
+
+.flex-buttons {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
+  justify-content: space-between;
+}
+
+button {
+  width: 45%;
+  height: 35px;
+  background-color: var(--celeste);
+  color: var(--blanco);
+  border-style: none;
+  border-radius: 5px;
+  font-size: var(--text-sm);
+}
+
+button.login {
+  width: 100%;
+  margin-bottom: 28%;
+}
+
 /*---------------------------------------FOOTER*/
 footer {
+  margin-top: 4%;
   background-color: var(--blanco);
   padding: 1% 2%;
 }
@@ -276,6 +383,9 @@ footer section i {
   background: var(--blanco);
 }
 
+footer h2 {
+  font-size: var(--text-sm);
+}
 .copyright {
   text-align: left;
   margin-left: 5px;
@@ -364,14 +474,14 @@ footer section i {
   }
 
   article.card {
-    flex:20%;
+    flex: 20%;
   }
 
   .footer-container {
     flex-direction: row;
     justify-content: space-around;
   }
-  
+
   footer div.footer-container section {
     width: 30%;
     max-width: 30%;
@@ -380,7 +490,10 @@ footer section i {
 
 /*Desktops---------------------------*/
 @media screen and (min-width: 769px) {
-  main, .top-head, header nav, .footer-container {
+  main,
+  .top-head,
+  header nav,
+  .footer-container {
     width: 80%;
     margin: 0 auto;
   }
@@ -399,10 +512,23 @@ footer section i {
     align-self: center;
   }
 
+  .user-register input {
+    height: 35px;
+    font-size: var(--text-sm);
+  }
+  .user-register input[type="radio"],
+  input[type="checkbox"] {
+    height: 15px;
+  }
+
+  .flex-row > .flex-row {
+    display: flex;
+    width: 20%;
+  }
 }
+
 @media screen and (min-width: 1149px) {
-  
-  h3{
+  h3 {
     font-size: 2em;
   }
 
@@ -424,5 +550,9 @@ footer section i {
 
   article.card {
     width: 25%;
+  }
+  .user-register {
+    width: 60%;
+    font-size: 1.1em;
   }
 }
