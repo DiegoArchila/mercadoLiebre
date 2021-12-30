@@ -184,7 +184,7 @@ header div.menu-hamburger i {
 /*-----------------------------------------MAIN*/
 
 main h3 {
-  margin-top: 15px;
+  margin-top: 3px;
 }
 main section {
   padding: 2%;
@@ -200,6 +200,14 @@ article.card {
   flex: 100%;
 }
 
+.card{
+  transition: all 0.5s ease-out;
+}
+
+article.card:hover {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
 article.card div {
   margin-top: 1px 0;
   position: relative;
@@ -207,7 +215,9 @@ article.card div {
 
 main section article div {
   background-color: var(--blanco);
-  padding: 15px;
+  padding-top: 5px;
+  padding-left: 3px;
+  padding-bottom: 5px;
 }
 
 main section article div i {
@@ -224,7 +234,13 @@ main section article div i {
   position: absolute;
   right: 20px;
   top: -17px;
+  transition: transform 0.5s ease-in;
 }
+
+main section article:hover div i {
+  transform: rotate(-90deg);
+}
+
 
 .discount {
   color: var(--verde);
@@ -240,12 +256,18 @@ main section article div i {
   font-size: var(--text-md);
 }
 
-main section article div h3 {
-  margin-top: 10px;
+main section article:hover div.description {
+  margin-top: 5px;
+  display: block;
+}
+
+div.description {
+  display: none;
+  position: absolute;
+  transition: display 10s ease-out;
 }
 
 h3.description {
-  display: none;
   font-size: 1.3em;
 }
 
@@ -345,6 +367,11 @@ button {
   border-radius: 5px;
   font-size: var(--text-sm);
   cursor: pointer;
+  transition: Background-color 0.3s ease-in;
+}
+
+button:hover{
+  background-color: #0022AA;
 }
 
 button.login {
@@ -433,10 +460,6 @@ footer h2 {
     margin: 0px;
   }
 
-  h3.description {
-    display: block;
-  }
-
   main section {
     flex-direction: row;
     flex-wrap: wrap;
@@ -445,7 +468,6 @@ footer h2 {
   }
 
   article.card {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     flex: 45%;
   }
 }
@@ -474,8 +496,16 @@ footer h2 {
     justify-content: flex-end;
   }
 
+  main section {
+    flex-wrap: nowrap;
+  }
+
   article.card {
-    flex: 20%;
+    flex: 45%;
+  }
+
+  article.card {
+    flex: 30%;
   }
 
   .footer-container {
