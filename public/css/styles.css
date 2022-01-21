@@ -198,26 +198,23 @@ main section {
 article.card {
   margin: 10px;
   flex: 100%;
-}
-
-.card{
-  transition: all 0.5s ease-out;
+  overflow: hidden;
+  transition: all 300ms ease-in;
 }
 
 article.card:hover {
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  transform: scale(1.05,1.05);
 }
 
 article.card div {
   margin-top: 1px 0;
   position: relative;
-}
-
-main section article div {
   background-color: var(--blanco);
   padding-top: 5px;
   padding-left: 3px;
   padding-bottom: 5px;
+  transition: all 300ms ease-in;
 }
 
 main section article div i {
@@ -234,13 +231,26 @@ main section article div i {
   position: absolute;
   right: 20px;
   top: -17px;
-  transition: transform 0.5s ease-in;
+  transition: transform 0.3s;
 }
 
 main section article:hover div i {
-  transform: rotate(-90deg);
+  transform: rotate(360deg);
 }
 
+main section article:hover div div.description {
+  margin-top: 5px;
+  display: block;
+}
+
+main section article div div.description {
+  display: none;
+  transition: 300ms;
+}
+
+h3.description {
+  font-size: 1.3em;
+}
 
 .discount {
   color: var(--verde);
@@ -256,20 +266,9 @@ main section article:hover div i {
   font-size: var(--text-md);
 }
 
-main section article:hover div.description {
-  margin-top: 5px;
-  display: block;
-}
 
-div.description {
-  display: none;
-  position: absolute;
-  transition: display 10s ease-out;
-}
 
-h3.description {
-  font-size: 1.3em;
-}
+
 
 .container-register-login {
   margin-bottom: 1%;
